@@ -1,30 +1,50 @@
 <template>
-  <div id="app">
-    <Navbar/>
+  <v-app>
+    <v-content>
+      <AppBar />
+      <HelloWorld />
+      <NewPost />
+    </v-content>
 
-  </div>
+    <v-card height="800px">
+      <v-footer v-bind="localAttrs" :padless="padless" fixed color="black">
+        <v-card-text class="white--text">
+          {{ new Date().getFullYear() }} — <em>Blogmeister Inc</em>
+        </v-card-text>
+      </v-footer>
+    </v-card>
+  </v-app>
 </template>
 
+
+// javascript
+
+
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-import Navbar from './components/NavBar.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import NewPost from "./components/NewPost.vue";
+import AppBar from "./components/AppBar.vue"
 
 export default {
-  name: 'App',
-  components: {
-    // HelloWorld,
-    Navbar
-  }
-}
+  components: { HelloWorld, NewPost, AppBar},
+  name: "App",
+
+  data: () => ({
+    
+  }),
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  background-color: aquamarine;
+
+// css
+
+
+<style scoped>
+.toolbarBM {
+  font-size: 1.65rem;
+  color: orange;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 2%;
 }
+
 </style>
