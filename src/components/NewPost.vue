@@ -3,8 +3,8 @@
     <v-form>
       <v-container>
         <v-row>
-          <v-col cols="12" sm="6" md="3">
-            <v-text-field label="Whats cooking?" outlined></v-text-field>
+          <v-col cols="12" lg="12" sm="12" md="12">
+            <v-text-field label="Whats cooking?" outlined color="orange"></v-text-field>
             <div class="text-center">
             <v-btn rounded color="orange" dark> + New Post </v-btn>
             </div>
@@ -24,7 +24,7 @@ export default {
 <style scoped>
 .txtbox {
   justify-content: center;
-  padding-left: 43%;
+  margin: 0 25% 0 25%;
 }
 
 

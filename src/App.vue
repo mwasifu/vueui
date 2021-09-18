@@ -2,7 +2,7 @@
   <v-app>
     <v-content>
       <AppBar />
-      <HelloWorld />
+
       <NewPost />
     </v-content>
 
@@ -21,12 +21,12 @@
 
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+
 import NewPost from "./components/NewPost.vue";
 import AppBar from "./components/AppBar.vue"
 
 export default {
-  components: { HelloWorld, NewPost, AppBar},
+  components: { NewPost, AppBar},
   name: "App",
 
   data: () => ({
